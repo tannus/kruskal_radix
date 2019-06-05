@@ -66,41 +66,43 @@ void radix_sort(vector<Edge> &graph){
     for(int tpot = 1; m/tpot > 0; tpot *= 10) count_sort(graph, tpot);
 }
 
+void copy_edge(Edge &a, Edge b){
+    a.u = b.u;
+    a.v = b.v;
+    a.w = b.w;
+}
+
 void merge(vector<Edge> &graph, int l, int m, int r){
     int i,j,k;
     int a = m - l + 1;
     int b = r - m;
     vector<Edge> left(a), right(b);
     for(i = 0; i < a; i++){
-        left[i].u = graph[l+i].u;
-        left[i].v = graph[l+i].v;
-        left[i].w = graph[l+i].w;
+        copy_edge(left[i],graph[l+i]);
     }
     for(j = 0; j < b; j++){
-        right[j].u = graph[m+1+j].u; 
-        right[j].v = graph[m+1+j].v; 
-        right[j].w = graph[m+1+j].w; 
+        copy_edge(right[j],graph[m+1+j]);
     }
     i = 0; j = 0; k = l;
     while(i < a && j < b){
         if(left[i].w <= right[j].w){
-            graph[k] = left[i];
+            copy_edge(graph[k],left[i]);
             i++;
         }
         else{
-            graph[k] = right[j];
+            copy_edge(graph[k],right[j]);
             j++;
         }
         k++;
     }
 
     while(i < a){
-        graph[k] = left[i]; 
+        copy_edge(graph[k],left[i]);
         i++; k++;
     }
     
     while(j < b){
-        graph[k] = right[j];
+        copy_edge(graph[k],right[j]);
         j++; k++;
     }
 }
@@ -129,7 +131,7 @@ int kruskal(vector<Edge> &graph, bool fun_sort, vector<Edge> &agm){
     
     print_edges(graph);
     if(fun_sort) radix_sort(graph);
-    else merge_sort(graph,0,graph.size());
+    else merge_sort(graph,0,graph.size()-1);
     print_edges(graph);
 
     for(Edge e: graph){
@@ -166,7 +168,7 @@ int main(int argc, char** argv){
 
     int result = kruskal(edges,fun_sort,agm);
     
-    output << result;
+    output << result << endl;
     for(int i=0; i < agm.size(); i++)
         output << agm[i].u <<" "<< agm[i].v <<" "<< agm[i].w << endl;
 
