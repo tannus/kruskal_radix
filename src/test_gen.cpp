@@ -31,6 +31,7 @@ int main(int argc, char** argv){
 
     int n = n_edges*(0.01*density);
 
+    output << n << endl;
     for(int i = 0; i < n; i++){
         output << edges[i][0] <<" "<< edges[i][1] <<" "<< setfill('0') << setw(n_digits) << edges[i][2] << endl;
     }
