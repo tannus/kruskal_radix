@@ -1,0 +1,90 @@
+-----
+graph-100-01-001000
+
+real	0m0,451s
+user	0m0,446s
+sys	0m0,004s
+-----
+graph-100-02-001000
+
+real	0m0,454s
+user	0m0,449s
+sys	0m0,004s
+-----
+graph-100-03-001000
+
+real	0m0,466s
+user	0m0,450s
+sys	0m0,016s
+-----
+graph-100-04-001000
+
+real	0m0,483s
+user	0m0,475s
+sys	0m0,008s
+-----
+graph-100-05-001000
+
+real	0m0,490s
+user	0m0,482s
+sys	0m0,008s
+-----
+graph-100-06-001000
+
+real	0m0,489s
+user	0m0,485s
+sys	0m0,004s
+-----
+graph-100-07-001000
+
+real	0m0,496s
+user	0m0,479s
+sys	0m0,016s
+-----
+graph-100-08-001000
+
+real	0m0,498s
+user	0m0,492s
+sys	0m0,004s
+-----
+graph-100-09-001000
+
+real	0m0,501s
+user	0m0,485s
+sys	0m0,016s
+-----
+graph-100-10-001000
+
+real	0m0,503s
+user	0m0,495s
+sys	0m0,008s
+-----
+graph-100-11-001000
+
+real	0m0,507s
+user	0m0,491s
+sys	0m0,016s
+-----
+graph-100-12-001000
+
+real	0m0,515s
+user	0m0,493s
+sys	0m0,020s
+-----
+graph-100-13-001000
+
+real	0m0,510s
+user	0m0,498s
+sys	0m0,012s
+-----
+graph-100-14-001000
+
+real	0m0,514s
+user	0m0,501s
+sys	0m0,012s
+-----
+graph-100-15-001000
+
+real	0m0,529s
+user	0m0,514s
+sys	0m0,004s

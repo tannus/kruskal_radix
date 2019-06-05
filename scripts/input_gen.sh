@@ -2,6 +2,8 @@
 
 mkdir -p input
 
+rm input/*
+
 for dimension in {005..100..5}
 do
   for digits in {01..15}
