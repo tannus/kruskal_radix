@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(int argc, char** argv){
+    ios::sync_with_stdio(false);
 
     ifstream input(argv[1]);
     ofstream output(argv[2]);
@@ -15,7 +16,7 @@ int main(int argc, char** argv){
     long long int n_edges = vertex*(vertex-1)/2;
 
     srand (time(NULL));
-
+    
     vector<vector<long long int> > edges(n_edges,vector<long long int>(3));
 
     long long int e = 0;
