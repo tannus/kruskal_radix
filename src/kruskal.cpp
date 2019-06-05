@@ -34,6 +34,12 @@ struct Edge {
     }
 };
 
+void copy_edge(Edge &a, Edge b){
+    a.u = b.u;
+    a.v = b.v;
+    a.w = b.w;
+}
+
 int get_max(vector<Edge> &graph){
     int m = graph[0].w;
     for(int i = 1; i < graph.size(); i++)
@@ -49,27 +55,19 @@ void count_sort(vector<Edge> &graph, int tpot){
     for(i = 0; i < graph.size(); i++) 
         count[ (graph[i].w/tpot)%10 ]++;
     
-    for(i = 0; i < 10; i++) count[i] += count[i-1];
-    
+    for(i = 1; i < 10; i++) count[i] += count[i-1];
+
     for(i = graph.size()-1; i >= 0; i--){
-        output[ count[ (graph[i].w/tpot)%10 ] - 1].u = graph[i].u;
-        output[ count[ (graph[i].w/tpot)%10 ] - 1].v = graph[i].v;
-        output[ count[ (graph[i].w/tpot)%10 ] - 1].w = graph[i].w;
+        copy_edge(output[ count[ (graph[i].w/tpot)%10 ] - 1],graph[i]);
         count[ (graph[i].w/tpot)%10 ]--;
     }
 
-    for(i = 0; i < graph.size(); i++) graph[i] = output[i];
+    for(i = 0; i < graph.size(); i++) copy_edge(graph[i],output[i]);
 }
 
 void radix_sort(vector<Edge> &graph){
     int m = get_max(graph);
     for(int tpot = 1; m/tpot > 0; tpot *= 10) count_sort(graph, tpot);
-}
-
-void copy_edge(Edge &a, Edge b){
-    a.u = b.u;
-    a.v = b.v;
-    a.w = b.w;
 }
 
 void merge(vector<Edge> &graph, int l, int m, int r){
@@ -129,10 +127,8 @@ int kruskal(vector<Edge> &graph, bool fun_sort, vector<Edge> &agm){
 
     for(int i = 0; i < n_edges; i++) make_set(i);
     
-    print_edges(graph);
     if(fun_sort) radix_sort(graph);
     else merge_sort(graph,0,graph.size()-1);
-    print_edges(graph);
 
     for(Edge e: graph){
         if(find_set(e.u) != find_set(e.v)){
