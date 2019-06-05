@@ -30,10 +30,9 @@ int main(int argc, char** argv){
     random_shuffle(edges.begin(),edges.end());
 
     int n = n_edges*(0.01*density);
-    cout << n <<" "<< n_edges << endl;
 
     for(int i = 0; i < n; i++){
-        output << edges[i][0] <<" "<< edges[i][1] <<" "<< edges[i][2] << endl;
+        output << edges[i][0] <<" "<< edges[i][1] <<" "<< setfill('0') << setw(n_digits) << edges[i][2] << endl;
     }
 
     return 0;
