@@ -141,6 +141,7 @@ int kruskal(vector<Edge> &graph, bool fun_sort, vector<Edge> &agm){
             union_sets(e.u,e.v);
         }
     }
+    return result;
 }
 
 bool set_arg(string c){
