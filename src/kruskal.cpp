@@ -1,23 +1,24 @@
 #include <bits/stdc++.h>
 
 #define pb(x) push_back(x);
+typedef long long int ll;
 
 using namespace std;
 
-int n_edges;
-vector<int> previous, order;
+ll n_edges;
+vector<ll> previous, order;
 
-void make_set(int v){
+void make_set(ll v){
     previous[v] = v;
     order[v] = 0;
 }
 
-int find_set(int v){
+ll find_set(ll v){
     if(v == previous[v]) return v;
     return previous[v] = find_set(previous[v]);
 }
 
-void union_sets(int a, int b){
+void union_sets(ll a, ll b){
     a = find_set(a);
     b = find_set(b);
     if(a != b){
@@ -28,7 +29,7 @@ void union_sets(int a, int b){
 }
 
 struct Edge {
-    int u, v, w;
+    ll u, v, w;
     bool operator<(Edge const& other){
         return w < other.w;
     }
@@ -40,16 +41,16 @@ void copy_edge(Edge &a, Edge b){
     a.w = b.w;
 }
 
-int get_max(vector<Edge> &graph){
-    int m = graph[0].w;
-    for(int i = 1; i < graph.size(); i++)
+ll get_max(vector<Edge> &graph){
+    ll m = graph[0].w;
+    for(ll i = 1; i < graph.size(); i++)
         m = max(m,graph[i].w);
     return m;
 }
 
-void count_sort(vector<Edge> &graph, int tpot){
+void count_sort(vector<Edge> &graph, ll tpot){
     vector<Edge> output(graph.size());
-    int i, count[10];
+    ll i, count[10];
     for(i = 0; i < 10; i++) count[i] = 0;
     
     for(i = 0; i < graph.size(); i++) 
@@ -66,14 +67,14 @@ void count_sort(vector<Edge> &graph, int tpot){
 }
 
 void radix_sort(vector<Edge> &graph){
-    int m = get_max(graph);
-    for(int tpot = 1; m/tpot > 0; tpot *= 10) count_sort(graph, tpot);
+    ll m = get_max(graph);
+    for(ll tpot = 1; m/tpot > 0; tpot *= 10) count_sort(graph, tpot);
 }
 
-void merge(vector<Edge> &graph, int l, int m, int r){
-    int i,j,k;
-    int a = m - l + 1;
-    int b = r - m;
+void merge(vector<Edge> &graph, ll l, ll m, ll r){
+    ll i,j,k;
+    ll a = m - l + 1;
+    ll b = r - m;
     vector<Edge> left(a), right(b);
     for(i = 0; i < a; i++){
         copy_edge(left[i],graph[l+i]);
@@ -105,9 +106,9 @@ void merge(vector<Edge> &graph, int l, int m, int r){
     }
 }
 
-void merge_sort(vector<Edge> &graph, int l, int r){
+void merge_sort(vector<Edge> &graph, ll l, ll r){
     if(l < r){
-        int m = l+(r-l)/2;
+        ll m = l+(r-l)/2;
         merge_sort(graph,l,m);
         merge_sort(graph,m+1,r);
         merge(graph,l,m,r);
@@ -116,16 +117,16 @@ void merge_sort(vector<Edge> &graph, int l, int r){
 
 void print_edges(vector<Edge> &graph){
     cout << "------------" << endl;
-    for(int i = 0; i < graph.size(); i++)
+    for(ll i = 0; i < graph.size(); i++)
         cout <<"Edge between: " << graph[i].u << " and " << graph[i].v << " - weighted:" << graph[i].w << endl;
     cout << "------------" << endl;
 }
 
-int kruskal(vector<Edge> &graph, bool fun_sort, vector<Edge> &agm){
-    int result = 0;
+ll kruskal(vector<Edge> &graph, bool fun_sort, vector<Edge> &agm){
+    ll result = 0;
     previous.resize(n_edges); order.resize(n_edges);
 
-    for(int i = 0; i < n_edges; i++) make_set(i);
+    for(ll i = 0; i < n_edges; i++) make_set(i);
     
     if(fun_sort) radix_sort(graph);
     else merge_sort(graph,0,graph.size()-1);
@@ -157,16 +158,16 @@ int main(int argc, char** argv){
     vector<Edge> agm;
 
     input >> n_edges;
-    for(int i=0; i < n_edges; i++){
+    for(ll i=0; i < n_edges; i++){
         Edge uv;
         input >> uv.u >> uv.v >> uv.w;
         edges.pb(uv);
     }
 
-    int result = kruskal(edges,fun_sort,agm);
+    ll result = kruskal(edges,fun_sort,agm);
     
     output << result << endl;
-    for(int i=0; i < agm.size(); i++)
+    for(ll i=0; i < agm.size(); i++)
         output << agm[i].u <<" "<< agm[i].v <<" "<< agm[i].w << endl;
 
     return 0;

@@ -8,15 +8,15 @@ mkdir -p results/time
 rm results/time/*
 rm agm/*
 
-for filename in graphs/*
-do
-  name=$(echo $filename | cut -c 8-)
-  
-  echo "-----" >> results/time/merge
-  echo $name >> results/time/merge
-  (time ./bin/kruskal.exe $filename  agm/agm-$name 0 && echo "-----" && echo "" ) &>> results/time/merge
-
-  echo "-----" >> results/time/radix
-  echo $name >> results/time/radix
-  (time ./bin/kruskal.exe $filename  agm/agm-$name 0) &>> results/time/radix
-done
+./scripts/test_part1.sh &
+./scripts/test_part2.sh &
+./scripts/test_part3.sh &
+./scripts/test_part4.sh &
+./scripts/test_part5.sh &
+./scripts/test_part6.sh &
+./scripts/test_part7.sh &
+./scripts/test_part8.sh &
+./scripts/test_part9.sh &
+./scripts/test_part10.sh &
+./scripts/test_part11.sh &
+./scripts/test_part12.sh &
