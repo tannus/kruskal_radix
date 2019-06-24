@@ -131,7 +131,7 @@ ll kruskal(vector<Edge> &graph, bool fun_sort, vector<Edge> &agm){
     if(fun_sort) radix_sort(graph);
     else merge_sort(graph,0,graph.size()-1);
 
-    for(Edge e: graph){
+    for(const Edge &e: graph){
         if(find_set(e.u) != find_set(e.v)){
             result += e.w;
             agm.pb(e);
@@ -141,14 +141,14 @@ ll kruskal(vector<Edge> &graph, bool fun_sort, vector<Edge> &agm){
     return result;
 }
 
-bool set_arg(string c){
+bool set_arg(string& c){
     int d = stoi(c);
-    if(d == 0) return false;
-    else return true;
+    return d != 0;
 }
 
 int main(int argc, char** argv){
-
+    
+    ios::sync_with_stdio(false);
     ifstream input(argv[1]);
     ofstream output(argv[2]);
     string c = argv[3];
@@ -164,12 +164,14 @@ int main(int argc, char** argv){
         edges.pb(uv);
     }
 
+    auto start = chrono::steady_clock::now();
     ll result = kruskal(edges,fun_sort,agm);
+    auto end = chrono::steady_clock::now();
     
+    output << chrono::duration_cast<chrono::milliseconds>(end - start).count() << endl;
     output << result << endl;
     for(ll i=0; i < agm.size(); i++)
         output << agm[i].u <<" "<< agm[i].v <<" "<< agm[i].w << endl;
 
     return 0;
-
 }

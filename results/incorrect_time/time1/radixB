@@ -1,0 +1,180 @@
+-----
+graph-095-01-001000
+
+real	0m1,177s
+user	0m1,112s
+sys	0m0,036s
+-----
+graph-095-01-010000
+
+real	2m14,876s
+user	2m10,088s
+sys	0m4,548s
+-----
+graph-095-02-001000
+
+real	0m1,257s
+user	0m1,184s
+sys	0m0,036s
+-----
+graph-095-02-010000
+
+real	2m15,819s
+user	2m10,996s
+sys	0m4,640s
+-----
+graph-095-03-001000
+
+real	0m1,263s
+user	0m1,196s
+sys	0m0,032s
+-----
+graph-095-03-010000
+
+real	2m13,377s
+user	2m8,832s
+sys	0m4,396s
+-----
+graph-095-04-001000
+
+real	0m1,057s
+user	0m1,028s
+sys	0m0,028s
+-----
+graph-095-04-010000
+
+real	2m14,450s
+user	2m9,844s
+sys	0m4,476s
+-----
+graph-095-05-001000
+
+real	0m1,079s
+user	0m0,996s
+sys	0m0,012s
+-----
+graph-095-05-010000
+
+real	2m10,510s
+user	2m5,784s
+sys	0m4,548s
+-----
+graph-095-06-001000
+
+real	0m1,306s
+user	0m1,148s
+sys	0m0,048s
+-----
+graph-095-06-010000
+
+real	2m10,979s
+user	2m6,844s
+sys	0m4,096s
+-----
+graph-095-07-001000
+
+real	0m0,919s
+user	0m0,836s
+sys	0m0,024s
+-----
+graph-095-07-010000
+
+real	2m3,797s
+user	1m59,324s
+sys	0m4,376s
+-----
+graph-095-08-001000
+
+real	0m1,272s
+user	0m1,160s
+sys	0m0,028s
+-----
+graph-095-08-010000
+
+real	2m51,751s
+user	1m58,404s
+sys	0m4,564s
+-----
+graph-095-09-001000
+
+real	0m1,228s
+user	0m1,168s
+sys	0m0,020s
+-----
+graph-095-09-010000
+
+real	2m27,121s
+user	1m55,580s
+sys	0m4,440s
+-----
+graph-095-10-001000
+
+real	0m1,000s
+user	0m0,936s
+sys	0m0,028s
+-----
+graph-095-10-010000
+
+real	2m38,631s
+user	1m58,460s
+sys	0m4,824s
+-----
+graph-095-11-001000
+
+real	0m1,276s
+user	0m1,196s
+sys	0m0,020s
+-----
+graph-095-11-010000
+
+real	2m32,260s
+user	2m1,528s
+sys	0m4,700s
+-----
+graph-095-12-001000
+
+real	0m0,975s
+user	0m0,816s
+sys	0m0,024s
+-----
+graph-095-12-010000
+
+real	2m39,386s
+user	2m4,552s
+sys	0m4,784s
+-----
+graph-095-13-001000
+
+real	0m1,110s
+user	0m0,816s
+sys	0m0,024s
+-----
+graph-095-13-010000
+
+real	2m46,539s
+user	1m56,012s
+sys	0m4,884s
+-----
+graph-095-14-001000
+
+real	0m1,105s
+user	0m1,044s
+sys	0m0,024s
+-----
+graph-095-14-010000
+
+real	1m52,293s
+user	1m42,880s
+sys	0m4,560s
+-----
+graph-095-15-001000
+
+real	0m0,994s
+user	0m0,944s
+sys	0m0,016s
+-----
+graph-095-15-010000
+
+real	1m50,068s
+user	1m42,316s
+sys	0m4,260s

@@ -1,0 +1,180 @@
+-----
+graph-080-01-001000
+
+real	0m0,784s
+user	0m0,772s
+sys	0m0,008s
+-----
+graph-080-01-010000
+
+real	2m44,858s
+user	1m45,380s
+sys	0m4,188s
+-----
+graph-080-02-001000
+
+real	0m1,038s
+user	0m0,988s
+sys	0m0,016s
+-----
+graph-080-02-010000
+
+real	2m2,975s
+user	1m34,732s
+sys	0m4,420s
+-----
+graph-080-03-001000
+
+real	0m1,060s
+user	0m0,992s
+sys	0m0,028s
+-----
+graph-080-03-010000
+
+real	1m54,344s
+user	1m50,128s
+sys	0m4,160s
+-----
+graph-080-04-001000
+
+real	0m1,099s
+user	0m1,004s
+sys	0m0,032s
+-----
+graph-080-04-010000
+
+real	2m28,629s
+user	1m40,792s
+sys	0m4,304s
+-----
+graph-080-05-001000
+
+real	0m1,085s
+user	0m1,036s
+sys	0m0,016s
+-----
+graph-080-05-010000
+
+real	2m19,306s
+user	1m51,364s
+sys	0m4,280s
+-----
+graph-080-06-001000
+
+real	0m0,917s
+user	0m0,864s
+sys	0m0,020s
+-----
+graph-080-06-010000
+
+real	3m2,594s
+user	1m53,772s
+sys	0m4,428s
+-----
+graph-080-07-001000
+
+real	0m0,752s
+user	0m0,656s
+sys	0m0,008s
+-----
+graph-080-07-010000
+
+real	2m34,945s
+user	1m46,148s
+sys	0m4,376s
+-----
+graph-080-08-001000
+
+real	0m0,906s
+user	0m0,840s
+sys	0m0,016s
+-----
+graph-080-08-010000
+
+real	2m8,591s
+user	1m36,308s
+sys	0m4,296s
+-----
+graph-080-09-001000
+
+real	0m0,841s
+user	0m0,792s
+sys	0m0,016s
+-----
+graph-080-09-010000
+
+real	2m14,999s
+user	1m38,336s
+sys	0m4,460s
+-----
+graph-080-10-001000
+
+real	0m0,717s
+user	0m0,652s
+sys	0m0,016s
+-----
+graph-080-10-010000
+
+real	2m32,284s
+user	1m43,484s
+sys	0m4,480s
+-----
+graph-080-11-001000
+
+real	0m0,918s
+user	0m0,844s
+sys	0m0,016s
+-----
+graph-080-11-010000
+
+real	2m34,323s
+user	1m38,992s
+sys	0m4,152s
+-----
+graph-080-12-001000
+
+real	0m0,913s
+user	0m0,836s
+sys	0m0,012s
+-----
+graph-080-12-010000
+
+real	2m31,798s
+user	1m41,476s
+sys	0m4,464s
+-----
+graph-080-13-001000
+
+real	0m0,748s
+user	0m0,676s
+sys	0m0,024s
+-----
+graph-080-13-010000
+
+real	2m11,980s
+user	1m36,804s
+sys	0m4,200s
+-----
+graph-080-14-001000
+
+real	0m0,862s
+user	0m0,792s
+sys	0m0,032s
+-----
+graph-080-14-010000
+
+real	2m0,363s
+user	1m34,288s
+sys	0m4,376s
+-----
+graph-080-15-001000
+
+real	0m1,031s
+user	0m0,976s
+sys	0m0,028s
+-----
+graph-080-15-010000
+
+real	1m56,841s
+user	1m36,052s
+sys	0m4,260s
